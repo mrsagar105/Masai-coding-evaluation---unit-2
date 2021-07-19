@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Products - Online Jewellery Store</title>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <nav>
+      <img class="logo" src="" alt="Logo">
+
+      <div class="rightnav">
+        <p><a href="products.html">Products</a> </p>
+        <div class="cart_section">
+          <p>Cart</p>
+          <div class="cart_items"></div>
+        </div>
+      </div>
+    </nav>
+
+    <h1 class="heading">Payments</h1>
+
+    <div class="cartandprod">
+
+
+      <div class="checkout_section">
+        <h2>Enter your card details</h2>
+        <input type="text" placeholder="Enter card name">
+        <input type="text" placeholder="Enter card number">
+        <input type="text" placeholder="Enter card PIN">
+
+        <button class="confirm button">Place Order</button>
+      </div>
+
+
+    </div>
+
+    <script>
+      let cart_section = document.querySelector(".confirm");
+      cart_section.addEventListener("click", function () {
+        window.location.href = "confirmation.html";
+      });
+
+      let cartItems = document.querySelector(".cart_items");
+      array = JSON.parse(localStorage.getItem("cart"));
+      cartItems.textContent = "array.length";
+    </script>
+</body>
+
+</html>
